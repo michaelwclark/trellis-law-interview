@@ -82,15 +82,17 @@ def get_thousands_index (number: int):
 
 
 def get_number_words_list(number: int, result=[]):
+    if number == 0:
+        return ['zero']
     if number < 0:
         raise ValueError('Invalid number')
-    if number < 19:
+    if number < 20:
         return [*result, ONES_MAP.get(number)]
     # Might be some other maths to make 100s work similar to 1000s but it's late. <3
     if number < 100:
         remain  = number % 10
         tens = (number - remain) / 10 
-        return get_number_words_list(tens, [TENS_MAP.get(tens), *result])
+        return get_number_words_list(remain, [TENS_MAP.get(tens), *result])
     if number < 1000:
         remain = number % 100
         hundreds = int((number - remain) / 100)
