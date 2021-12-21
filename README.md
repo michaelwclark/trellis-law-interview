@@ -24,3 +24,5 @@ http://localhost:8080
 - This was my first ground up Vue 'project'. I mostly review PRs in vue and do some light debugging or component fixup.
 - My django is similar position, but with Django Rest Framework on top.
 - This was fun, thanks.
+- Usually my commits are smaller.
+- Testing is a thing I can do, but not illustrated here.
